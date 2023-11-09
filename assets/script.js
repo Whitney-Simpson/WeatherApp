@@ -1,5 +1,5 @@
-var APIKey = f5c7c99462c9401e774f3aa3a67ddc7f;
-var city;
+var APIKey = "f5c7c99462c9401e774f3aa3a67ddc7f";
+var city = "Bellaire";
 // This section lists a number of parameters, but only the following two are required:
 // q: The query parameter, where we'll add the city variable.
 // appid: The application id or key, where we'll add the API key variable.
@@ -25,3 +25,10 @@ var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" +
 //Now that you have created your query URL, you only need to call the Fetch API to pass the query URL in as a parameter, as shown in the following example:
 fetch(queryURL)
 //Remember that the query URL won't work automatically as it's written. You'll need to adjust your application to accept user input, to store in the city variable that you've created.
+async function getCurrentWeather() {
+    const response = await fetch(queryURL);
+    const currentWeather = await response.json();
+    console.log(currentWeather);
+}
+getCurrentWeather();
+
