@@ -8,47 +8,84 @@
     <title>Weather Application</title>
 </head>
 
-<body onload="DefaultScreen()">
-    <center>
+<body>
+    <div id="inputContainer">
         <h1 id="para">5 Day Weather Forecast</h1>
-        <p id="inputContainer">City: <input type="text" id="cityInput"></p>
-        <button onclick="GetWeather()">Click Me</button>
+        <form id="submit">
+            <label> City: </label>
+            <input type="text" id="cityInput" placeholder="city" />
+            <button type="button" onclick="GetWeather()">Click Me</button>
+        </form>
         <h2 id="cityName">--Bellaire--</h2>
-    </center>
-    <div id="weatherContainer">
-        <div id="iconsContainer">
-            <div class="icons">
-                <p class="weather" id="day1"></p>
-                <div class="image"><img src="" class="imgClass" id="img1" alt=""></div>
-                <p class="minValues" id="day1Min">Loading...</p>
-                <p class="maxValues" id="day1Max">Loading...</p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="day2"></p>
-                <div class="image"><img src="" class="imgClass" id="img2" alt=""></div>
-                <p class="minValues" id="day2Min">Loading...</p>
-                <p class="maxValues" id="day2Max">Loading...</p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="day3"></p>
-                <div class="image"><img src="" class="imgClass" id="img3" alt=""></div>
-                <p class="minValues" id="day3Min">Loading...</p>
-                <p class="maxValues" id="day3Max">Loading...</p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="day4"></p>
-                <div class="image"><img src="" class="imgClass" id="img4" alt=""></div>
-                <p class="minValues" id="day4Min">Loading...</p>
-                <p class="maxValues" id="day4Max">Loading...</p>
-            </div>
-            <div class="icons">
-                <p class="weather" id="day5"></p>
-                <div class="image"><img src="" class="imgClass" id="img5" alt=""></div>
-                <p class="minValues" id="day5Min">Loading...</p>
-                <p class="maxValues" id="day5Max">Loading...</p>
-            </div>
-        </div>
     </div>
+    <div id="currentDay" class="icons">
+        <p class="weather" id="day1"></p>
+        <div class="image"><img src="" class="imgClass" id="img1" alt="" /></div>
+        <p class="minValues" id="day1Min">Loading...</p>
+        <p class="maxValues" id="day1Max"></p>
+        <p class="humidity" id="day1Humidity">Humidity</p>
+        <p class="windSpeed" id="day1WindSpeed">Wind Speed</p>
+    </div>
+
+    <div id="weatherContainer">
+        <div id="iconsContainer"></div>
+        <!-- <div id="iconsContainer">
+        <div class="icons">
+          <p class="weather" id="day2"></p>
+          <div class="image">
+            <img src="" class="imgClass" id="img2" alt="" />
+          </div>
+          <p class="minValues" id="day2Min">Min:</p>
+          <p class="maxValues" id="day2Max">Max:</p>
+          <p class="humidity" id="day2Humidity">Humidity</p>
+          <p class="windSpeed" id="day2WindSpeed">Wind Speed</p>
+        </div>
+        <div class="icons">
+          <p class="weather" id="day3"></p>
+          <div class="image">
+            <img src="" class="imgClass" id="img3" alt="" />
+          </div>
+          <p class="minValues" id="day3Min">Min:</p>
+          <p class="maxValues" id="day3Max">Max:</p>
+          <p class="humidity" id="day3Humidity">Humidity</p>
+          <p class="windSpeed" id="day3WindSpeed">Wind Speed</p>
+        </div>
+        <div class="icons">
+          <p class="weather" id="day4"></p>
+          <div class="image">
+            <img src="" class="imgClass" id="img4" alt="" />
+          </div>
+          <p class="minValues" id="day4Min">LMin:</p>
+          <p class="maxValues" id="day4Max">LMax:</p>
+          <p class="humidity" id="day4Humidity">Humidity</p>
+          <p class="windSpeed" id="day4WindSpeed">Wind Speed</p>
+        </div>
+        <div class="icons">
+          <p class="weather" id="day5"></p>
+          <div class="image">
+            <img src="" class="imgClass" id="img5" alt="" />
+          </div>
+          <p class="minValues" id="day5Min">Min:</p>
+          <p class="maxValues" id="day5Max">Max:</p>
+          <p class="humidity" id="day5Humidity">Humidity</p>
+          <p class="windSpeed" id="day5WindSpeed">Wind Speed</p>
+        </div>
+        <div class="icons">
+          <p class="weather" id="day6"></p>
+          <div class="image">
+            <img src="" class="imgClass" id="img6" alt="" />
+          </div>
+          <p class="minValues" id="day6Min">Min:</p>
+          <p class="maxValues" id="day6Max">Max:</p>
+          <p class="humidity" id="day6Humidity">Humidity</p>
+          <p class="windSpeed" id="day6WindSpeed">Wind Speed</p>
+        </div>
+      </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/script.js"></script>
 </body>
 
