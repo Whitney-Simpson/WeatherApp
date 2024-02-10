@@ -3,7 +3,7 @@ var currentDay = dayjs();
 // console.log(currentDay);
 let pastCities = JSON.parse(localStorage.getItem('pastCities'))||[];
 function getCoords(cityName) {
-  const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`;
+  const geoURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`;
   fetch(geoURL)
     .then((response) => response.json())
     .then((data) => {
