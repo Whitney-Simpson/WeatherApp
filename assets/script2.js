@@ -94,9 +94,9 @@ function displayForcast(data) {
     let forcastCard = $("<div>").addClass("card col-2");
     let cardBody = $("<div>").addClass("card-body");
     let cardTitle = $("<h3>").addClass("card-title").text(dateDisplay);
-    let tempEl = $("<p>").addClass("card-text").text(`temperature: ${Math.round(data[i].main.temp)} ${String.fromCharCode(176)}`);
-    let wind = $("<p>").addClass("card-text").text(data[i].wind.speed);
-    let humidity = $("<p>").addClass("card-text").text(data[i].main.humidity);
+    let tempEl = $("<p>").addClass("card-text").text(`Temp: ${Math.round(data[i].main.temp)} ${String.fromCharCode(176)}`);
+    let wind = $("<p>").addClass("card-text").text(`Wind Speed: ${(data[i].wind.speed)} mph`);
+    let humidity = $("<p>").addClass("card-text").text(`Humidity ${(data[i].main.humidity)} ${String.fromCharCode(37)}`);
     let imgIconEl = $("<img>").attr(
       "src",
       `https://openweathermap.org/img/wn/${data[i].weather[0].icon}.png`

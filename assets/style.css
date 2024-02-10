@@ -6,6 +6,12 @@
 .card-title {
     display: inline-block;
 }
+
+h1 {
+    text-align: center;
+    background-color: rgb(97, 97, 170);
+    color: whitesmoke;
+}
 #icon {
     height: 200px;
     width: 190px;
@@ -21,8 +27,8 @@
 
 }
 
-#pastCities button {
-    margin: 1rem;
+#pastCities button { 
+    margin: 5px ;
 }
 
 #forcast {
@@ -33,14 +39,23 @@
     display: flex;
 }
 
+button {
+   margin: 25px 5px 5px 50px;
+}
+
+
 
 @media only screen and (max-width: 768px) {
-    #forcast {
+    #forcast, .row {
         flex-direction: column;
     }
 
     #forcast .card {
         width: 100%;
+    }
+    #pastCities button {
+        margin: 5px ;
+        width: 175%;
     }
     
 }
