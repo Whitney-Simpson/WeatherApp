@@ -1,40 +1,12 @@
-/* * {
-    color: black;
-    background-color: blueviolet;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+.hide {
+    display: none;
 }
 
-#cityInput, #cityName, #inputContainer, button {
-    margin: 3px;
-    padding: 5px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-}
-#currentDay {
-border: 1px solid black;
-margin: 0 auto;
-    height: 150px;
-    width: 100%;
-   
-}
-
-#weatherContainer {
-    height: 300px;
-    width: 100%;
-    border: 1px solid black;
-}
-
-#iconsContainer {
-    display: flex;
-    justify-content: space-around;
-    height: 300px;
-    width: 1200px;
-
-}
-
-.icons {
+.card-title {
     display: inline-block;
+}
+#icon {
     height: 200px;
     width: 190px;
     margin: 20px;
@@ -42,24 +14,34 @@ margin: 0 auto;
     border-radius: 10px;
 }
 
-.image {
-    height: 150px;
-    width: auto;
+#pastCities {
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+
 }
 
-.imgClass {
-    height: 150px;
-    width: auto;
+#pastCities button {
+    margin: 1rem;
 }
 
-.weather {
-    margin: 5px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
+#forcast {
+    display: flex;
+    justify-content: space-between;
+}
+#current-title {
+    display: flex;
 }
 
 
+@media only screen and (max-width: 768px) {
+    #forcast {
+        flex-direction: column;
+    }
 
+    #forcast .card {
+        width: 100%;
+    }
+    
+}
 
- */
